@@ -2,6 +2,8 @@ package gr.cosmote.springExercise.entities;
 
 import gr.cosmote.springExercise.Vehicle;
 
+import java.util.List;
+
 public class User {
 
     private Long id;
@@ -9,6 +11,7 @@ public class User {
     private String firstName;
     private String email;
     private Vehicle vehicle;
+    private List<Vehicle> vehicles;
 
     public Long getId() {
         return id;
@@ -48,5 +51,13 @@ public class User {
 
     public void setVehicle(Vehicle vehicle) {
         this.vehicle = vehicle;
+    }
+
+    public List<Vehicle> getVehicles() {
+        return vehicles;
+    }
+
+    public void setVehicles(List<Vehicle> vehicles) {
+        this.vehicles = vehicles;
     }
 }
