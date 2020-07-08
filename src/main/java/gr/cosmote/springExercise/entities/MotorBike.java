@@ -3,7 +3,6 @@ package gr.cosmote.springExercise.entities;
 import gr.cosmote.springExercise.Vehicle;
 import org.springframework.stereotype.Component;
 
-//@Component
 public class MotorBike implements Vehicle {
 
     private Long Id;

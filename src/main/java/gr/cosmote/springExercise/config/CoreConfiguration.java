@@ -8,7 +8,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 
 @Configuration
-@ComponentScan("gr.cosmote.springExercise.entities")
 public class CoreConfiguration {
 
 
@@ -18,8 +17,9 @@ public class CoreConfiguration {
     }
 
 
-    @Bean(name = "mycar")
+    @Bean(name = "car")
     @Primary
-    public Car getCar() { return new Car();}
+    public Car getCar() {
+        return new Car();}
 
 }
