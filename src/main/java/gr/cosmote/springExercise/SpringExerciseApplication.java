@@ -10,12 +10,13 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class SpringExerciseApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringExerciseApplication.class, args);
+	//	SpringApplication.run(SpringExerciseApplication.class, args);
 
-		ApplicationContext ctx = new ClassPathXmlApplicationContext("application-context.xml");
+		ApplicationContext ctx = SpringApplication.run(SpringExerciseApplication.class, args);
+	//	ApplicationContext ctx = new ClassPathXmlApplicationContext("application-context.xml");
 
 		User user = (User)ctx.getBean("user");
-		user.getVehicle().drive();
+		user.getVehicles().stream().forEach(v -> v.drive());
 
 
 	}
