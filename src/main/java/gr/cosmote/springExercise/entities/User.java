@@ -1,16 +1,18 @@
 package gr.cosmote.springExercise.entities;
 
 import gr.cosmote.springExercise.Vehicle;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
-import java.util.List;
-
+@Component
 public class User {
 
     private Long id;
     private String lastName;
     private String firstName;
     private String email;
-    private List<Vehicle> vehicles;
+    private Vehicle vehicle;
+
 
     public Long getId() {
         return id;
@@ -44,11 +46,12 @@ public class User {
         this.email = email;
     }
 
-    public List<Vehicle> getVehicles() {
-        return vehicles;
+    public Vehicle getVehicle() {
+        return vehicle;
     }
 
-    public void setVehicles(List<Vehicle> vehicles) {
-        this.vehicles = vehicles;
+    @Autowired
+    public void setVehicle(Vehicle vehicle) {
+        this.vehicle = vehicle;
     }
 }
