@@ -7,12 +7,7 @@
     <!--Define your beans here -->
     <bean id="user"
           class="gr.cosmote.springExercise.entities.User">
-        <property name="vehicles">
-            <list value-type="gr.cosmote.springExercise.Vehicle">
-                <ref bean="car"/>
-                <ref bean="motorbike"/>
-            </list><!--have to add also motorbike -->
-        </property>
+        <property name="vehicle" ref="car"/>
     </bean>
     <bean id="car"
           class="gr.cosmote.springExercise.entities.Car">
