@@ -12,14 +12,4 @@ import org.springframework.context.annotation.Primary;
 public class CoreConfiguration {
 
 
-    @Bean(name = "motorbike")
-    public MotorBike getBike() {
-        return new MotorBike();
-    }
-
-
-    @Bean(name = "mycar")
-    @Primary
-    public Car getCar() { return new Car();}
-
 }

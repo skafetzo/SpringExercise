@@ -1,9 +1,11 @@
 package gr.cosmote.springExercise.entities;
 
 import gr.cosmote.springExercise.Vehicle;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @Component
+@Primary
 public class Car implements Vehicle {
 
     private Long Id;
