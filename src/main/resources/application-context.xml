@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--Define your beans here -->
+    <bean id="user"
+          class="gr.cosmote.springExercise.entities.User">
+        <property name="vehicles">
+            <list value-type="gr.cosmote.springExercise.Vehicle">
+                <ref bean="car"/>
+                <ref bean="motorbike"/>
+            </list><!--have to add also motorbike -->
+        </property>
+    </bean>
+    <bean id="car"
+          class="gr.cosmote.springExercise.entities.Car">
+    </bean>
+    <bean id="motorbike"
+          class="gr.cosmote.springExercise.entities.MotorBike">
+    </bean>
+
+</beans>

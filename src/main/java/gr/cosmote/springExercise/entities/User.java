@@ -10,7 +10,6 @@ public class User {
     private String lastName;
     private String firstName;
     private String email;
-    private Vehicle vehicle;
     private List<Vehicle> vehicles;
 
     public Long getId() {
@@ -43,14 +42,6 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public Vehicle getVehicle() {
-        return vehicle;
-    }
-
-    public void setVehicle(Vehicle vehicle) {
-        this.vehicle = vehicle;
     }
 
     public List<Vehicle> getVehicles() {
