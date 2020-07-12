@@ -1,10 +1,7 @@
 package gr.cosmote.springExercise.entities;
 
 import gr.cosmote.springExercise.Vehicle;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
-@Component
 public class User {
 
     private Long id;
@@ -50,7 +47,6 @@ public class User {
         return vehicle;
     }
 
-    @Autowired
     public void setVehicle(Vehicle vehicle) {
         this.vehicle = vehicle;
     }
