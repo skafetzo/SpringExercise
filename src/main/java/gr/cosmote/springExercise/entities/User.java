@@ -4,6 +4,8 @@ import gr.cosmote.springExercise.Vehicle;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 
 public class User {
 
@@ -11,7 +13,7 @@ public class User {
     private String lastName;
     private String firstName;
     private String email;
-    private Vehicle vehicle;
+    private List<Vehicle> vehicles;
 
 
     public Long getId() {
@@ -46,12 +48,11 @@ public class User {
         this.email = email;
     }
 
-    public Vehicle getVehicle() {
-        return vehicle;
+    public List<Vehicle> getVehicles() {
+        return vehicles;
     }
 
-
-    public void setVehicle(Vehicle vehicle) {
-        this.vehicle = vehicle;
+    public void setVehicles(List<Vehicle> vehicles) {
+        this.vehicles = vehicles;
     }
 }

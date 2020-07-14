@@ -1,11 +1,15 @@
 package gr.cosmote.springExercise.config;
 
+import gr.cosmote.springExercise.Vehicle;
 import gr.cosmote.springExercise.entities.Car;
 import gr.cosmote.springExercise.entities.MotorBike;
 import gr.cosmote.springExercise.entities.User;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Configuration
 public class CoreConfiguration {
@@ -24,7 +28,8 @@ public class CoreConfiguration {
     @Bean(name = "user")
     public User getUser(){
         User user = new User();
-        user.setVehicle(getCar());
+        List<Vehicle> myList = new ArrayList(List.of(getBike(),getCar()));
+        user.setVehicles(myList);
         return user;
     }
 

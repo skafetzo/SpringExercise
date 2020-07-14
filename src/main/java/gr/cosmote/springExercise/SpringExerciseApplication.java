@@ -14,7 +14,7 @@ public class SpringExerciseApplication {
 		ApplicationContext ctx = SpringApplication.run(SpringExerciseApplication.class, args);
 
 		User user = (User)ctx.getBean("user");
-		user.getVehicle().drive();
+		user.getVehicles().stream().forEach(v -> v.drive());
 
 
 	}
